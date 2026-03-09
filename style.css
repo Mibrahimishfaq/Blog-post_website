@@ -9,12 +9,93 @@ h6 = 1.2
 p = 1
 small = 0.8  */
 
+/* =======FONTS======= */
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap');
 
 /* =======UNIVERSAL SELECTOR======= */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =======UNIVERSAL SELECTOR======= */
+/* =======MAIN SELECTOR======= */
+html{
+    background-color: #232830;
+    color: aliceblue;
+    font-family: poppins, sans-serif;
+}
+
+.main-container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+/* =======HEADER======= */
+.logo a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.nav-links{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.nav-links a:hover{
+    color: #ff6347;
+}
+
+/* =======HERO======= */
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.hero img{
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    margin: 2rem auto;
+}
+
+.hero h1{
+    font-size: 2.98rem;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: .5rem;
+    font-family: "Recursive", sans-serif;
+    font-style: italic;
+    color: #FF7575;
+}
+
+.hero p{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* =======ARTICLE LINES======= */
+.article-line{
+ 
+}
