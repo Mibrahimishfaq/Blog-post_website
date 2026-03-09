@@ -1,0 +1,20 @@
+/* =======FONT SIZES======= */
+
+/* h1 = 2.98 rem
+h2 = 2.48
+h3 = 2.07
+h4 = 1.72
+h5 = 1.44
+h6 = 1.2
+p = 1
+small = 0.8  */
+
+
+/* =======UNIVERSAL SELECTOR======= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =======UNIVERSAL SELECTOR======= */
