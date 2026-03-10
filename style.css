@@ -13,6 +13,15 @@ small = 0.8  */
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap');
 
 /* =======UNIVERSAL SELECTOR======= */
+:root{
+    --primary-color: #fff;
+    --primary-light: #909090;
+
+    --secondary-color: #FF7575;
+    --secondary-shade: #ff6347;
+
+}
+
 
 *{
     margin: 0;
@@ -23,7 +32,7 @@ small = 0.8  */
 /* =======MAIN SELECTOR======= */
 html{
     background-color: #232830;
-    color: aliceblue;
+    color: var(--primary-color);
     font-family: poppins, sans-serif;
 }
 
@@ -41,7 +50,7 @@ nav{
 /* =======HEADER======= */
 .logo a{
     text-decoration: none;
-    color: aliceblue;
+    color: var(--primary-color);
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -54,13 +63,13 @@ nav{
 
 .nav-links a{
     text-decoration: none;
-    color: aliceblue;
+    color: var(--primary-color);
     font-size: 1.2rem;
     font-weight: 500;
 }
 
 .nav-links a:hover{
-    color: #ff6347;
+    color: var(--secondary-shade);
 }
 
 /* =======HERO======= */
@@ -87,7 +96,7 @@ nav{
     margin-bottom: .5rem;
     font-family: "Recursive", sans-serif;
     font-style: italic;
-    color: #FF7575;
+    color: var(--secondary-color);
 }
 
 .hero p{
@@ -96,6 +105,173 @@ nav{
 }
 
 /* =======ARTICLE LINES======= */
-.article-line{
- 
+.article-lines{
+ display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3rem;
+    border-top: 1px solid var(--primary-light);
+    padding: 1rem;
+}
+
+.article-icons-container img{
+    width: 15px;
+    margin: 1.5px;
+}
+
+.article-categories-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+       list-style-type: none;
+    gap: 3.5rem;
+}
+
+.article-categories-container a{
+    text-decoration: none;
+    color: var(--primary-light);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* =======MAIN CARDS SECTION======= */
+.card-container{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+}
+
+
+/* =======CARD DESIGN======= */
+.card{
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    padding: 1.2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   /* left align everything */
+    gap: 0.8rem;
+}
+
+
+/* =======CARD IMAGE======= */
+.card img{
+    width: 90%;
+    border-radius: 10px;
+    align-self: center;   /* keeps image centered while text stays left */
+}
+
+
+/* =======HEADING PARAGRAPH======= */
+.bold_para{
+    font-size: 1.2rem;        /* same as h6 */
+    font-weight: 700;
+    line-height: 1.5;
+    color: #000;
+}
+
+
+/* =======NORMAL PARAGRAPH======= */
+.normal_para{
+    font-size: 1rem;          /* p size */
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--primary-light);
+}
+
+
+/* =======CARD FOOTER======= */
+.card div:last-child{
+    font-size: 0.8rem;        /* small text */
+    color: var(--primary-light);
+}
+
+/* ===== PAGINATION CONTAINER ===== */
+
+.pagination{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+
+/* ===== PAGINATION LIST ===== */
+
+.pagination-list{
+    display: flex;
+    gap: 1.2rem;
+    list-style: none;
+    align-items: center;
+}
+
+
+/* ===== LINKS ===== */
+
+.page-link{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #909090;
+    font-style: italic;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+
+/* ===== HOVER EFFECT ===== */
+
+.page-link:hover{
+    color: #ffffff;
+}
+
+
+/* ===== ACTIVE PAGE ===== */
+
+.page-link.active{
+    color: #FF7575;
+    font-weight: 600;
+}
+
+
+/* ===== RED LINE ABOVE ACTIVE PAGE ===== */
+
+.page-link.active::before{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: #FF7575;
+}
+
+
+/* ===== PREVIOUS / NEXT STYLE ===== */
+
+.prev,
+.next{
+    color: #909090;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    border-top: .5px solid var(--primary-light);
+    padding: 3rem;
+}
+
+footer :first-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+footer :nth-child(2){
+    background-color: blue;
+    padding: .3rem;
+    border-radius: 5px;
 }
